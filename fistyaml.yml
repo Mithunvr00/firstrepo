@@ -1,3 +1,14 @@
-FirshPush:
-    echo "My first pull success"
-    echo "second line....."mm
+name: Shell commands
+
+on: [push]
+
+Jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello world"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
